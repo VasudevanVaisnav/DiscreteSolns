@@ -22,7 +22,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -41,6 +42,8 @@
                     android:layout_height="wrap_content"
                     android:text="SCHEDULE MEETINGS"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -55,7 +58,8 @@
             android:layout_rowWeight="0"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,6 +78,8 @@
                     android:layout_height="wrap_content"
                     android:text="NEW PROJECT"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -88,7 +94,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -107,6 +114,8 @@
                     android:layout_height="wrap_content"
                     android:text="ONGOING PROJECTS"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -121,7 +130,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -140,6 +150,8 @@
                     android:layout_height="wrap_content"
                     android:text="COMPLETED PROJECTS"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -154,7 +166,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -173,6 +186,8 @@
                     android:layout_height="wrap_content"
                     android:text="ALL PROJECTS"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -187,7 +202,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/teal_800">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -206,6 +222,8 @@
                     android:layout_height="wrap_content"
                     android:text="CONTACT US"
                     android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"
                     android:textAlignment="center" />
 
             </LinearLayout>

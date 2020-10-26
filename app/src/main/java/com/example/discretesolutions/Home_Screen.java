@@ -2,6 +2,8 @@ package com.example.discretesolutions;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Switch;
@@ -21,6 +23,7 @@ public class Home_Screen extends AppCompatActivity implements NavigationView.OnN
     DrawerLayout drawer;
     NavigationView nav_view;
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class Home_Screen extends AppCompatActivity implements NavigationView.OnN
 
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
