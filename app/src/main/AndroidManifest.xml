@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.discretesolutions">
 
     <application
@@ -10,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiscreteSolutions">
         <activity android:name=".MainActivity2"></activity>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Home_Screen"
+            android:theme="@style/Theme.DiscreteSolutions.NoActionBar"
+            android:label="HOME"></activity>
     </application>
 
 </manifest>

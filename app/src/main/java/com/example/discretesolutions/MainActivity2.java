@@ -23,6 +23,8 @@ public class MainActivity2 extends AppCompatActivity {
         EditText passf = (EditText) findViewById(R.id.passipfield);
         EditText confpassf = (EditText) findViewById(R.id.cpassipfield);
         Button sbtn = (Button) findViewById(R.id.signupbtn);
+
+        //Listening to SignIn button
         sbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
