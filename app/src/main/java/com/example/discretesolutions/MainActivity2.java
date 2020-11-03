@@ -2,6 +2,7 @@ package com.example.discretesolutions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,8 @@ public class MainActivity2 extends AppCompatActivity {
                 } else if (pno.length() != 10) {
                     status.setText("Incorrect phone number");
                 } else {
+                    register(name, eid, pno, cname, pass, cpass);
+                    startActivity(new Intent(MainActivity2.this, completed_projects.class));
                     register(name, eid, pno, cname, pass, cpass);
                     status.setText("Successfully Signed Up");
                 }

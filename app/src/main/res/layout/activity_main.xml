@@ -1,98 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/logolog"
-        android:layout_width="249dp"
-        android:layout_height="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/logtxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
 
-    <TextView
-        android:id="@+id/logtxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/login_containter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889" />
+        <ImageView
+            android:id="@+id/logolog"
+            android:layout_width="249dp"
+            android:layout_height="224dp"
+            app:layout_constraintBottom_toTopOf="@+id/logtxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
 
-    <LinearLayout
-        android:id="@+id/login_containter"
-        android:layout_width="269dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_shape3"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.878">
-
-        <EditText
-            android:id="@+id/unipfield"
-            android:layout_width="204dp"
-            android:layout_height="42dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="35dp"
-            android:textAlignment="center"
-            android:background="@drawable/custom_shape1"
-            android:hint="ENTER USERNSME HERE"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/pwipfield"
-            android:layout_width="204dp"
-            android:layout_height="49dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/custom_shape1"
-            android:hint="ENTER PASSWORD HERE"
-            android:inputType="textPassword"
-            android:textAlignment="center"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/lgnbtn"
-            android:layout_width="180dp"
+        <TextView
+            android:id="@+id/logtxt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/custom_shape2"
-            android:textColor="#1dff00"
-            android:textSize="25sp"
-            android:textStyle="italic"
-            android:text="LOGIN" />
+            android:text="LOGIN"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/login_containter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.889" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/login_containter"
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_shape3"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.878">
 
-    <TextView
-        android:id="@+id/noaccbt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New User? Click here to SIGNUP"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/unipfield"
+                android:layout_width="204dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:textAlignment="center"
+                android:background="@drawable/custom_shape1"
+                android:hint="ENTER USERNSME HERE"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/pwipfield"
+                android:layout_width="204dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/custom_shape1"
+                android:hint="ENTER PASSWORD HERE"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/lgnbtn"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/custom_shape2"
+                android:textColor="#1dff00"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:text="LOGIN" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noaccbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User? Click here to SIGNUP"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

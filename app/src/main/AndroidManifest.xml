@@ -10,9 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DiscreteSolutions">
-        <activity android:name=".MainActivity2"></activity>
-
-
+        <activity android:name=".completed_projects"></activity>
+        <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +21,8 @@
         </activity>
         <activity
             android:name=".Home_Screen"
-            android:theme="@style/Theme.DiscreteSolutions.NoActionBar"
-            android:label="HOME"></activity>
+            android:label="HOME"
+            android:theme="@style/Theme.DiscreteSolutions.NoActionBar" />
     </application>
 
 </manifest>
