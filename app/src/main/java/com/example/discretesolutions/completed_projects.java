@@ -16,6 +16,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -28,16 +29,22 @@ public class completed_projects extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_completed_projects);
-        TableLayout t = (TableLayout) findViewById(R.id.lscp);
+        LinearLayout t = (LinearLayout) findViewById(R.id.lscp);
         TextView txtv = (TextView) findViewById(R.id.cpstatus);
-        for (int i = 0; i < 10; i++) {
+        /*
+        cparr[] = getCP();
+        count = cparr.length();
+        */
+        int length = 10;
+        for (int i = 0; i < length; i++) {
             createElement("XY", "W125", "1/02/2001", "2/03/2002", i);
         }
+        txtv.setText("You currently have ".concat(Integer.toString(length)) + " projects");
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 LinearLayout lvv;
-                for (int j = 0; j < 10; j++) {
+                for (int j = 0; j < length; j++) {
                     lvv = (LinearLayout) findViewById(2000 + j);
                     int finalJ = j;
                     lvv.setOnClickListener(new View.OnClickListener() {
@@ -52,8 +59,7 @@ public class completed_projects extends AppCompatActivity {
     }
 
     public void createElement(String projectName, String projectId, String dateStarted, String dateEnded, int i) {
-        TableRow row = new TableRow(this);
-        TableLayout t = (TableLayout) findViewById(R.id.lscp);
+        LinearLayout t = (LinearLayout) findViewById(R.id.lscp);
         LinearLayout lv = new LinearLayout(this);
         lv.setOrientation(LinearLayout.VERTICAL);
         TextView displayID = new TextView(this);
@@ -61,7 +67,7 @@ public class completed_projects extends AppCompatActivity {
         TextView displaySD = new TextView(this);
         TextView displayED = new TextView(this);
         dateStarted = "Started on ".concat(dateStarted);
-        dateEnded = "Started on ".concat(dateEnded);
+        dateEnded = "Ended on ".concat(dateEnded);
         System.out.println(dateEnded);
         System.out.println("lol");
         System.out.println(dateStarted);
@@ -100,10 +106,9 @@ public class completed_projects extends AppCompatActivity {
         lv.addView(displayED);
         lv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         lv.setBackgroundResource(R.drawable.customshape6);
-        TableRow.LayoutParams lp = (TableRow.LayoutParams) new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 20, 0, 20);
-        row.setLayoutParams(lp);
-        row.addView(lv);
-        t.addView(row, lp);
+        LinearLayout.LayoutParams Lp = (LinearLayout.LayoutParams) lv.getLayoutParams();
+        Lp.setMargins(0, 0, 0, 60);
+        lv.setLayoutParams(Lp);
+        t.addView(lv);
     }
 }
