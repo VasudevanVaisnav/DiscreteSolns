@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiscreteSolutions">
         <activity android:name=".completed_projects"></activity>
+        <activity
+            android:name=".New_Project"
+            android:windowSoftInputMode="adjustPan|stateVisible"></activity>
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>

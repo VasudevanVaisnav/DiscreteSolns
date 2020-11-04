@@ -41,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
                     status.setText("Incorrect phone number");
                 } else {
                     register(name, eid, pno, cname, pass, cpass);
-                    startActivity(new Intent(MainActivity2.this, completed_projects.class));
+                    startActivity(new Intent(MainActivity2.this, Home_Screen.class));
                     register(name, eid, pno, cname, pass, cpass);
                     status.setText("Successfully Signed Up");
                 }
