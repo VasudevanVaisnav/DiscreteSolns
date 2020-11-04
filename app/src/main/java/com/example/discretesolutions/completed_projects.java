@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TableLayout;
@@ -26,11 +28,22 @@ import com.google.android.material.appbar.AppBarLayout;
 public class completed_projects extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_completed_projects);
         LinearLayout t = (LinearLayout) findViewById(R.id.lscp);
         TextView txtv = (TextView) findViewById(R.id.cpstatus);
+
+        Button b = findViewById(R.id.clickbtn);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendID();
+            }
+        });
+
         /*
         cparr[] = getCP();
         count = cparr.length();
@@ -111,4 +124,14 @@ public class completed_projects extends AppCompatActivity {
         lv.setLayoutParams(Lp);
         t.addView(lv);
     }
+
+    public void sendID() {
+        TextView txtv = (TextView) findViewById(R.id.cpstatus);
+        int id = Integer.parseInt(txtv.getText().toString());
+        //System.out.println("id:::"+id);
+        Intent i = new Intent(this, DisplayA.class);
+        i.putExtra("ID", id);
+        startActivity(i);
+    }
+
 }
