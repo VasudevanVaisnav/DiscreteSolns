@@ -1,7 +1,5 @@
 package com.example.discretesolutions;
 
-import androidx.annotation.DrawableRes;
-import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,30 +8,21 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.style.StyleSpan;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.AppBarLayout;
-
-public class completed_projects extends AppCompatActivity {
+public class all_projects extends AppCompatActivity {
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_completed_projects);
-        LinearLayout t = (LinearLayout) findViewById(R.id.lscp);
-        TextView txtv = (TextView) findViewById(R.id.cpstatus);
+        setContentView(R.layout.activity_all_projects);
+        LinearLayout t = (LinearLayout) findViewById(R.id.lsap);
+        TextView txtv = (TextView) findViewById(R.id.apstatus);
         /*
         cparr[] = getCP();
         count = cparr.length();
@@ -48,17 +37,17 @@ public class completed_projects extends AppCompatActivity {
             public void onClick(View view) {
                 LinearLayout lvv;
                 for (int j = 0; j < length; j++) {
-                    lvv = (LinearLayout) findViewById(2000 + j);
+                    lvv = (LinearLayout) findViewById(4000 + j);
                     int finalJ = j;
                     lvv.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             String id = new String();
                             Bundle arg = new Bundle();
-                            TextView t1 = (TextView) findViewById(3000 + finalJ);
+                            TextView t1 = (TextView) findViewById(5000 + finalJ);
                             id = t1.getText().toString();
                             arg.putString("id", id);
-                            Intent i = new Intent(completed_projects.this, display_a.class);
+                            Intent i = new Intent(all_projects.this, DisplayB.class);
                             i.putExtras(arg);
                             startActivity(i);
                         }
@@ -69,7 +58,7 @@ public class completed_projects extends AppCompatActivity {
     }
 
     public void createElement(String projectName, String projectId, String dateStarted, String dateEnded, int i) {
-        LinearLayout t = (LinearLayout) findViewById(R.id.lscp);
+        LinearLayout t = (LinearLayout) findViewById(R.id.lsap);
         LinearLayout lv = new LinearLayout(this);
         lv.setOrientation(LinearLayout.VERTICAL);
         TextView displayID = new TextView(this);
@@ -109,8 +98,8 @@ public class completed_projects extends AppCompatActivity {
         displayID.layout(10, 5, 10, 5);
         displaySD.layout(10, 5, 10, 5);
         displayED.layout(10, 5, 10, 10);
-        lv.setId(2000 + i);
-        displayID.setId(3000 + i);
+        lv.setId(4000 + i);
+        displayID.setId(5000 + i);
         lv.addView(displayName);
         lv.addView(displayID);
         lv.addView(displaySD);

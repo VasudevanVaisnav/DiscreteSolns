@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="5dp">
+    tools:context=".all_projects">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/header_cp"
+            android:id="@+id/header_ap"
             android:layout_width="413dp"
             android:layout_height="50dp"
             android:layout_marginBottom="50dp"
@@ -24,7 +24,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/cpstatus"
+            android:id="@+id/apstatus"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
             android:layout_gravity="center"
@@ -32,12 +32,11 @@
             android:layout_marginBottom="50dp" />
 
         <LinearLayout
-            android:id="@+id/lscp"
+            android:id="@+id/lsap"
             android:layout_width="307dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:orientation="vertical" />
-
     </LinearLayout>
 </ScrollView>
