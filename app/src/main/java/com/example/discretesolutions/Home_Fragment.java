@@ -39,7 +39,7 @@ public class Home_Fragment extends Fragment {
         });
 
         CardView card2 = v.findViewById(R.id.all_projects);
-        card1.setOnClickListener(new View.OnClickListener() {
+        card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), all_projects.class);

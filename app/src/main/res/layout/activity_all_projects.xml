@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="50dp"
             android:background="#2435cd"
-            android:text="COMPLETED PROJECTS"
+            android:text="ALL PROJECTS"
             android:textColor="#dbca32"
             android:textSize="36sp"
             android:textStyle="bold" />

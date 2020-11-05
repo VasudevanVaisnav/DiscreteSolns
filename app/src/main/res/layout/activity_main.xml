@@ -57,7 +57,7 @@
                 android:layout_marginTop="35dp"
                 android:textAlignment="center"
                 android:background="@drawable/custom_shape1"
-                android:hint="ENTER USERNSME HERE"
+                android:hint="ENTER USERNAME HERE"
                 android:textSize="14sp" />
 
             <EditText
@@ -79,8 +79,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/custom_shape2"
-                android:textColor="#1dff00"
+                android:background="@color/yellow"
+                android:textColor="#000002"
                 android:textSize="25sp"
                 android:textStyle="italic"
                 android:text="LOGIN" />
