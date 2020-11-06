@@ -17,6 +17,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Home_Screen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +25,8 @@ public class Home_Screen extends AppCompatActivity implements NavigationView.OnN
     NavigationView nav_view;
     Toolbar toolbar;
 
+    FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +84,9 @@ public class Home_Screen extends AppCompatActivity implements NavigationView.OnN
 
                 break;
             case R.id.nav_logout:
-
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(Home_Screen.this, MainActivity.class);
+                startActivity(i);
                 break;
 
         }
